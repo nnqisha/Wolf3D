@@ -6,7 +6,7 @@
 /*   By: nnqisha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/11 12:36:37 by nnqisha           #+#    #+#             */
-/*   Updated: 2018/08/26 10:12:50 by nnqisha          ###   ########.fr       */
+/*   Updated: 2018/09/16 16:18:12 by nnqisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_strequ(char const *s1, char const *s2);
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
-int		ft_count(const char *s, char c);
+int		ft_count_line(const char *s, char c);
 
 int		ft_atoi(const char *s);
 char	*ft_itoa(int n);

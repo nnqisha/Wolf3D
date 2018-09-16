@@ -6,7 +6,7 @@
 /*   By: nnqisha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 18:51:39 by nnqisha           #+#    #+#             */
-/*   Updated: 2018/09/11 12:46:28 by nnqisha          ###   ########.fr       */
+/*   Updated: 2018/09/16 16:39:08 by nnqisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ray_length(t_wolf *len)
 {
 	len->delta_x = sqrt(1 + (len->ray_dir_y * len->ray_dir_y) /
 			(len->ray_dir_x * len->ray_dir_x));
-		len->delta_y = sqrt(1 + (len->ray_dir_x * len->ray_dir_x) /
+	len->delta_y = sqrt(1 + (len->ray_dir_x * len->ray_dir_x) /
 			(len->ray_dir_y * len->ray_dir_y));
 }
 
@@ -45,7 +45,7 @@ t_wolf	*calc_distance(t_wolf *dist)
 	return (dist);
 }
 
-static	int	inbounds(t_wolf *dist)
+int		inbounds(t_wolf *dist)
 {
 	if (dist->map_x > 0 && dist->map_x < dist->x)
 		if (dist->map_y > 0 && dist->map_y < dist->y)
@@ -53,7 +53,7 @@ static	int	inbounds(t_wolf *dist)
 	return (0);
 }
 
-double		wall_distance(t_wolf *dist)
+double	wall_distance(t_wolf *dist)
 {
 	dist->hit = 0;
 	while (dist->hit == 0)

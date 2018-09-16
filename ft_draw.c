@@ -6,17 +6,15 @@
 /*   By: nnqisha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 16:52:21 by nnqisha           #+#    #+#             */
-/*   Updated: 2018/09/11 14:21:37 by nnqisha          ###   ########.fr       */
+/*   Updated: 2018/09/16 16:39:33 by nnqisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/wolf.h"
 
-t_khalas		mycolorpik(t_wolf *mywolf);
-
-void		draw_line(t_wolf *lines, int x)
+void			draw_line(t_wolf *lines, int x)
 {
-	int		y;
+	int			y;
 
 	y = lines->draw_start;
 	while (++y <= lines->draw_end)
@@ -24,40 +22,13 @@ void		draw_line(t_wolf *lines, int x)
 		SDL_RenderDrawPoint(lines->renderer, x, y);
 	}
 }
-/*
-void		draw_floor_and_ceiling(t_wolf *instance)
+
+void			wall_draw(t_wolf *ray)
 {
-	size_t	x;
-	size_t	y;
+	int			y;
+	t_khalas	myc;
 
-	x = 0;
-	while (++x <= WIN_WIDTH)
-	{
-		y = 0;
-		while (++y <= WIN_HEIGHT)
-		{
-			if (++y <= WIN_HEIGHT / 2)
-			{
-				SDL_SetRenderDrawColor(instance->renderer, 0, 0xDD, 0xFF, 0xFF);
-				SDL_RenderDrawPoint(instance->renderer, x, y);
-			}
-			else
-			{
-				SDL_SetRenderDrawColor(instance->renderer, 0xFF, 0, 0xFF, 0xFF);
-				SDL_RenderDrawPoint(instance->renderer, x, y);
-			}
-		}
-	}
-}
-*/
-void		wall_draw(t_wolf *ray)
-{
-	int		y;
-
-	t_khalas myc;
-
-	myc = mycolorpik(ray);
-
+	myc = colourpick(ray);
 	y = -1;
 	ray->cel = (WIN_HEIGHT / 2.0) - WIN_HEIGHT / ray->perp_wall_dist;
 	ray->flo = WIN_HEIGHT - ray->cel;
@@ -70,7 +41,6 @@ void		wall_draw(t_wolf *ray)
 		}
 		else if (y >= ray->cel && y < ray->flo)
 		{
-			// choose_color(ray);
 			SDL_SetRenderDrawColor(ray->renderer, myc.r, myc.b, myc.g, 0xFF);
 			SDL_RenderDrawPoint(ray->renderer, ray->screen_x, y);
 		}
@@ -82,9 +52,9 @@ void		wall_draw(t_wolf *ray)
 	}
 }
 
-void		draw_walls(t_wolf *ray)
+void			draw_walls(t_wolf *ray)
 {
-	int		y;
+	int			y;
 
 	ray->screen_x = -1;
 	while (++ray->screen_x < WIN_WIDTH)
@@ -110,56 +80,3 @@ void		draw_walls(t_wolf *ray)
 		wall_draw(ray);
 	}
 }
-
-t_khalas		mycolorpik(t_wolf *mywolf)
-{
-	t_khalas	mycolors;
-	if (mywolf->side == 1)
-	{
-		if (mywolf->ray_dir_y > 0)
-		{
-			mycolors.r = 0x3b;
-			mycolors.g = 0xFF;
-			mycolors.b = 0x9a;
-		}
-		else
-		{
-			mycolors.r = 0xc6;
-			mycolors.g = 0x32;
-			mycolors.b = 0x32;
-		}
-	}
-	else if (mywolf->side == 0)
-	{
-		if (mywolf->ray_dir_x > 0)
-		{
-			mycolors.r = 0x84;
-			mycolors.g = 0x24;
-			mycolors.b = 0x5b;
-		}
-		else
-		{
-			mycolors.r = 0x5b;
-			mycolors.g = 0x84;
-			mycolors.b = 0x84;
-		}
-	}
-	return (mycolors);
-}
-
-/*
-void		choose_color(t_wolf *color)
-{
-	if (color->worldmap[color->map_x][color->map_y] == 1)
-		SDL_SetRenderDrawColor(color->renderer, 0xFF, 0, 0, 0xFF);
-	else if (color->worldmap[color->map_x][color->map_y] == 2)
-		SDL_SetRenderDrawColor(color->renderer, 0, 0xFF, 0, 0xFF);
-	else if (color->worldmap[color->map_x][color->map_y] == 3)
-		SDL_SetRenderDrawColor(color->renderer, 0, 0, 0xFF, 0xFF);
-	else if (color->worldmap[color->map_x][color->map_y] == 4)
-		SDL_SetRenderDrawColor(color->renderer, 0xFF, 0xFF, 0, 0xFF);
-	else if (color->worldmap[color->map_x][color->map_y] == 5)
-		SDL_SetRenderDrawColor(color->renderer, 0xFF, 0xFF, 0xFF, 0xFF);
-	else
-		SDL_SetRenderDrawColor(color->renderer, 0x88, 0x88, 0x88, 0xFF);
-}*/

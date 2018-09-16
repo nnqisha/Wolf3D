@@ -6,7 +6,7 @@
 #    By: nnqisha <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/11 17:47:33 by nnqisha           #+#    #+#              #
-#    Updated: 2018/08/22 16:39:38 by nnqisha          ###   ########.fr        #
+#    Updated: 2018/09/16 16:16:00 by nnqisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ SRC = ft_memset.c ft_bzero.c ft_memcpy.c ft_memchr.c ft_memcmp.c ft_strlen.c \
 	  ft_putendl_fd.c ft_putnbr_fd.c ft_memalloc.c ft_memdel.c ft_strdel.c ft_strclr.c\
 	  ft_striter.c ft_striteri.c ft_strmapi.c ft_strsplit.c ft_strmap.c ft_strjoin.c\
 	  ft_strtrim.c ft_strnew.c ft_strequ.c ft_strnequ.c ft_itoa.c get_next_line.c\
-	  ft_swap.c ft_numcount.c ft_count.c\
+	  ft_swap.c ft_numcount.c ft_count_line.c\
 
 OBJ = ft_memset.o ft_bzero.o ft_memcpy.o ft_memchr.o ft_memcmp.o ft_strlen.o\
 	  ft_strcpy.o ft_strncpy.o ft_strcat.o ft_strncat.o ft_strlcat.o ft_strchr.o\
@@ -32,7 +32,7 @@ OBJ = ft_memset.o ft_bzero.o ft_memcpy.o ft_memchr.o ft_memcmp.o ft_strlen.o\
 	  ft_putendl_fd.o ft_putnbr_fd.o ft_memalloc.o ft_memdel.o ft_strdel.o ft_strclr.o\
 	  ft_striter.o ft_striteri.o ft_strmapi.o ft_strsplit.o ft_strmap.o ft_strjoin.o\
 	  ft_strtrim.o ft_strnew.o ft_strequ.o ft_strnequ.o ft_itoa.o get_next_line.o\
-	  ft_swap.o ft_numcount.o ft_count.o\
+	  ft_swap.o ft_numcount.o ft_count_line.o\
 
 FLAGS = -Wall -Wextra -Werror
 

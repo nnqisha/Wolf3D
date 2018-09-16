@@ -6,7 +6,7 @@
 /*   By: nnqisha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 16:51:44 by nnqisha           #+#    #+#             */
-/*   Updated: 2018/09/16 11:16:24 by nnqisha          ###   ########.fr       */
+/*   Updated: 2018/09/16 16:37:01 by nnqisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,10 @@ void	ft_free2d_double(double **st, int size)
 	free(st);
 }
 
-int	main(int ac, char **av)
+int		main(int ac, char **av)
 {
 	t_wolf env;
+
 	if (ac == 2)
 	{
 		if (open(av[1], O_RDONLY) == -1)
@@ -44,8 +45,6 @@ int	main(int ac, char **av)
 				ft_event_handlers(&env);
 				SDL_RenderPresent(env.renderer);
 			}
-			SDL_DestroyWindow(env.window);
-			SDL_Quit();
 			ft_free2d_double(env.worldmap, env.y);
 		}
 	}
