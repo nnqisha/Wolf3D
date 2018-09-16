@@ -1,0 +1,28 @@
+build/SDL_coreaudio.lo: \
+  /goinfre/nnqisha/Desktop/Final_Wolf3D/SDL2-2.0.8/src/audio/coreaudio/SDL_coreaudio.m \
+  /goinfre/nnqisha/Desktop/Final_Wolf3D/SDL2-2.0.8/src/audio/coreaudio/../../SDL_internal.h \
+  /goinfre/nnqisha/Desktop/Final_Wolf3D/SDL2-2.0.8/src/audio/coreaudio/../../dynapi/SDL_dynapi.h \
+  /goinfre/nnqisha/Desktop/Final_Wolf3D/SDL2-2.0.8/src/audio/coreaudio/../../dynapi/SDL_dynapi_overrides.h \
+  include/SDL_config.h \
+  /goinfre/nnqisha/Desktop/Final_Wolf3D/SDL2-2.0.8/include/SDL_platform.h \
+  /goinfre/nnqisha/Desktop/Final_Wolf3D/SDL2-2.0.8/include/begin_code.h \
+  /goinfre/nnqisha/Desktop/Final_Wolf3D/SDL2-2.0.8/include/close_code.h \
+  /goinfre/nnqisha/Desktop/Final_Wolf3D/SDL2-2.0.8/include/SDL_audio.h \
+  /goinfre/nnqisha/Desktop/Final_Wolf3D/SDL2-2.0.8/include/SDL_stdinc.h \
+  /goinfre/nnqisha/Desktop/Final_Wolf3D/SDL2-2.0.8/include/SDL_config.h \
+  /goinfre/nnqisha/Desktop/Final_Wolf3D/SDL2-2.0.8/include/SDL_error.h \
+  /goinfre/nnqisha/Desktop/Final_Wolf3D/SDL2-2.0.8/include/SDL_endian.h \
+  /goinfre/nnqisha/Desktop/Final_Wolf3D/SDL2-2.0.8/include/SDL_mutex.h \
+  /goinfre/nnqisha/Desktop/Final_Wolf3D/SDL2-2.0.8/include/SDL_thread.h \
+  /goinfre/nnqisha/Desktop/Final_Wolf3D/SDL2-2.0.8/include/SDL_atomic.h \
+  /goinfre/nnqisha/Desktop/Final_Wolf3D/SDL2-2.0.8/include/SDL_rwops.h \
+  /goinfre/nnqisha/Desktop/Final_Wolf3D/SDL2-2.0.8/include/SDL_hints.h \
+  /goinfre/nnqisha/Desktop/Final_Wolf3D/SDL2-2.0.8/src/audio/coreaudio/../SDL_audio_c.h \
+  /goinfre/nnqisha/Desktop/Final_Wolf3D/SDL2-2.0.8/src/audio/coreaudio/../SDL_sysaudio.h \
+  /goinfre/nnqisha/Desktop/Final_Wolf3D/SDL2-2.0.8/src/audio/coreaudio/../../SDL_dataqueue.h \
+  /goinfre/nnqisha/Desktop/Final_Wolf3D/SDL2-2.0.8/src/audio/coreaudio/SDL_coreaudio.h \
+  /goinfre/nnqisha/Desktop/Final_Wolf3D/SDL2-2.0.8/include/SDL_assert.h \
+  /goinfre/nnqisha/Desktop/Final_Wolf3D/SDL2-2.0.8/src/audio/coreaudio/../../thread/SDL_systhread.h \
+  /goinfre/nnqisha/Desktop/Final_Wolf3D/SDL2-2.0.8/src/audio/coreaudio/../../thread/SDL_thread_c.h \
+  /goinfre/nnqisha/Desktop/Final_Wolf3D/SDL2-2.0.8/src/audio/coreaudio/../../thread/pthread/SDL_systhread_c.h \
+  /goinfre/nnqisha/Desktop/Final_Wolf3D/SDL2-2.0.8/src/audio/coreaudio/../../thread/../SDL_error_c.h

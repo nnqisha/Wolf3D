@@ -1,0 +1,23 @@
+t_test			map_read(char *file, t_test test)
+{
+
+	test.newread.py = 0;
+	while ((read.ret = get_next_line(read.fd, &read.line)) > 0)
+	{
+		
+		test.newread.px = 0;
+		test.newread.split = ft_strsplit(read.line, ' ');
+		while (test.newread.split[test.newread.px] != NULL)
+		{
+		
+            		test.myworld[test.newread.px][test.newread.py] = ft_atoi(test.newread.split[test.newread.px]);
+			test.newread.px += 1;
+		}
+		test.newread.py += 1;
+		free(read.line);
+		ft_free_2d_array((void**)test.newread.split);
+	}
+	//close(test.fd);
+	test.rows = test.newread.py;
+	test.cols = test.newread.px;
+}
